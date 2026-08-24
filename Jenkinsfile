@@ -2,24 +2,24 @@ pipeline{
     agent any 
     stages{
         stage('git'){
-        step{
+        steps{
            sh 'git credentialsId: 'github_creds', url: 'https://github.com/saranyaAWS/augustdemo.git'
            echo "git succeffully" 
         }
         }
         stage("version"){
-        step{
+        steps{
            sh 'java --version'
         }
         }
         stage('build'){
-        step{
+        steps{
             sh 'mvn clean package'
             echo "mvn initalized"
         }
         }
         stage('deploy'){
-        step{
+        steps{
             sh 'cp target/classes App'
         }
         }
