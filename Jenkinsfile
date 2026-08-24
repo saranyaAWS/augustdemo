@@ -20,7 +20,7 @@ pipeline{
         }
         stage('deploy'){
         steps{
-            sh 'cp target/classes App'
+            sh 'cp target App'
         }
         }
     }
