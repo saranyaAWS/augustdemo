@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('git'){
         steps{
-           'git credentialsId: 'github_creds', url: 'https://github.com/saranyaAWS/augustdemo.git'
+           git credentialsId: 'github_creds', url: 'https://github.com/saranyaAWS/augustdemo.git'
            echo "git succeffully" 
         }
         }
