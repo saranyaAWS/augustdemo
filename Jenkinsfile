@@ -20,7 +20,7 @@ pipeline{
         }
         stage('deploy'){
         steps{
-            sh 'java -cp target/classes com.example.App'
+            sh 'java -jar target/AWS-1.0-SNAPSHOT.jar'
 
         }
         }
