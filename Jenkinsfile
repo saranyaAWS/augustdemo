@@ -20,7 +20,8 @@ pipeline{
         }
         stage('deploy'){
         steps{
-            sh 'java -cp -r target/classes App'
+            sh 'java -cp target/classes com.example.App'
+
         }
         }
     }
